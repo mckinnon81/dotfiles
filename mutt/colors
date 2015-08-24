@@ -1,0 +1,81 @@
+# object can be one of:
+#   * attachment
+#   * body              (match regexp in the body of messages)
+#   * bold              (hiliting bold patterns in the body of messages)
+#   * error             (error messages printed by Mutt)
+#   * header            (match regexp in the message header)
+#   * hdrdefault        (default color of the message header in the pager)
+#   * index             (match pattern in the message index)
+#   * indicator         (arrow or bar used to indicate the current item in a menu)
+#   * markers           (the '+' markers at the beginning of wrapped lines in the pager)
+#   * message           (informational messages)
+#   * normal            (normal (not quoted) text
+#   * quoted            (text matching $quote_regexp in the body of a message)
+#   * quoted1, quotedN  (higher levels of quoting)
+#   * search            (hiliting of words in the pager)
+#   * signature
+#   * status            (mode lines used to display info about the mailbox or message)
+#   * tilde             (the '~' used to pad blank lines in the pager)
+#   * tree              (thread tree drawn in the message index and attachment menu)
+#   * underline         (hiliting underlined patterns in the body of messages)
+#
+#
+# foreground and background can be one of the following:
+#   * white
+#   * black
+#   * green
+#   * magenta
+#   * blue
+#   * cyan
+#   * yellow
+#   * red
+#   * default
+
+color status        color010    color000
+color normal        color015    color000
+color indicator     color011    color000
+color tree          color009    color000
+color attachment    color009    color000
+color signature     color005    color000 
+color quoted        color011    color000 
+color message       color015    color000
+color tilde         color010    color000
+color markers       color010    color000
+color header        color011    color000    "(^Date):"
+color header        color015    color000    "(^From):"
+color header        color027    color000    "(^To):"
+color header        color027    color000    "(^Cc):"
+color header        color202    color000    "(^Subject):"
+mono  header bold "^(Date|From|To|Cc|Subject):"
+
+
+
+color index         color013    color000    ~U
+color index         color009    color000    ~F
+color index         color027    color000    ~N
+color index         color001    color000    ~D
+color index         color000    color009    ~T
+
+mono index bold ~U
+mono index bold ~F
+mono index bold ~N
+mono index bold ~D
+mono index bold ~T
+
+color body          color011    color000    "<[Ee]?[Bb]?[Gg]>"
+color body          color011    color000    "<[Bb][Gg]>"
+color body          color011    color000    "[;:]-*[)>(<|]"
+
+
+# # URLs
+color body          color027    color000    "(http|ftp|news|telnet|finger)://[^ \”\t\r\n]*"
+color body          color027    color000    "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
+color body          color027    color000    "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+mono body bold "(http|ftp|news|telnet|finger)://[^ \”\t\r\n]*"
+mono body bold "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
+
+
+
+
+
+

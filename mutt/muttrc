@@ -1,0 +1,67 @@
+
+source $HOME/.mutt/colors
+
+
+
+folder-hook '~/Mail/Comprofix' 'source ~/.mutt/comprofix'
+
+macro index <f2> '<sync-mailbox><enter-command>source ~/.mutt/comprofix<enter><change-folder>!<enter>'
+
+source ~/.mutt/comprofix
+
+
+set move = no
+set confirmappend = no
+set mailcap_path = $HOME/.mutt/mailcap
+set sort = threads
+set sort_aux = reverse-date-received
+set smart_wrap
+
+alternative_order text/plain text/html
+
+auto_view text/html
+auto_view image/png
+auto_view application/x-gunzip
+auto_view application/x-gzip
+
+
+
+#set sidebar_shortpath
+set sidebar_visible = no
+set sidebar_width = 33
+set sidebar_delim = '|'
+set sidebar_sort = yes
+#set sidebar_format  = "%B%* (%N)"
+
+color sidebar_new color027 color000
+
+macro index b '<enter-command>toggle sidebar_visible<enter><refresh>'
+macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
+bind index B bounce-message
+
+
+#set index_format="%3C %Z %[!%d.%m %H:%M] %-35.35L (%5c) %s"       # Bronski's favourite
+set index_format="%4C %Z %[!%d %b %y %I:%M%p] %-35.35L (%5c) %s"
+#set index_format="%4C %Z %d %-15.15L (%-5c) %s"
+set status_chars  = " *%A"
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+set pager_index_lines=12
+
+bind index \CP sidebar-prev
+bind index \CN sidebar-next
+bind index \CO sidebar-open
+bind pager \CP sidebar-prev
+bind pager \CN sidebar-next
+bind pager \CO sidebar-open
+
+
+# Pretty it up
+# # # ----
+# # # default list of header fields to weed out when displaying mail
+# # # ignore them all and then unignore what you want to see
+ignore *
+unignore Date To From: Cc Subject X-Tts X-Label
+unignore x-mailing-list: posted-to:
+unignore x-mailer:
+hdr_order Date To From: Cc Subject X-Tts X-Label
+#

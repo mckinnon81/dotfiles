@@ -83,17 +83,14 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source ~/.zshrc_aliases
 
-alias aupg="apt-get upgrade -y"
-alias aupd="apt-get update -y"
 
 
 if [ -e /usr/share/terminfo/x/xterm-256color ] && [ "$COLORTERM" = "xfce4-terminal" ]; then
     export TERM=xterm-256color
 fi
 
-if [[ -n "$DISPLAY" && "$TERM" = "xterm" ]]; then 
-    export TERM=xterm-256color 
+if [[ -n "$DISPLAY" && "$TERM" = "xterm" ]]; then
+    export TERM=xterm-256color
 fi
-
-

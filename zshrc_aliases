@@ -1,0 +1,86 @@
+
+DISTRO=$(lsb_release -si)
+
+if [[ $DISTRO = 'Debian' ]]; then
+
+    alias archey='screenfetch'
+
+fi
+
+# Fun / Games
+#alias aquarium='asciiquarium'
+#alias sudoku='nsudoku'
+#alias tetris='bastet'
+#alias mario='mupen64plus --windowed ~/ROMs/N64/SuperMario64.v64'
+#alias kart='mupen64plus --windowed ~/ROMs/N64/MarioKart64.v64'
+#alias zelda='mupen64plus --windowed ~/ROMs/N64/Zelda64.rom'
+#alias zeldamajora='mupen64plus --windowed ~/ROMs/N64/ZeldaMajorasMask.z'
+#alias ps2='pcsx2'
+
+#System
+alias shutdown='sudo shutdown -P now'
+
+## Packages
+alias rarx='unrar x'
+alias zipx='unzip x'
+alias gzx='tar -xzvf'
+alias xzx='tar -xJvf'
+alias bzx='tar -xvjf'
+
+# Pacman (Arch Linux)
+alias P='pacaur'
+alias PY='pacaur -Syy'
+alias PU='pacaur -Syu'
+alias PAY='sudo pacman -Syy'
+alias PAU='sudo pacman -Syu'
+
+# APT (Debian)
+alias AU="apt-get update"
+alias AD="apt-get upgrade"
+alias AUY="apt-get update -y"
+alias AUD="apt-get upgrade -y"
+
+# Default to human readable figures
+alias df='df -h'
+alias du='du -h'
+
+# Interactive operation...
+# alias rm='rm -i'
+# alias cp='cp -i'
+# alias mv='mv -i'
+
+# Misc :)
+alias less='less -r'                          # raw control characters
+alias grep='grep --color'                     # show differences in colour
+alias egrep='egrep --color=auto'              # show differences in colour
+alias fgrep='fgrep --color=auto'              # show differences in colour
+
+# Some shortcuts for different directory listings
+alias ls='ls -hF --color=auto'                 # classify files in colour
+alias dir='ls --color=auto --format=vertical'
+alias vdir='ls --color=auto --format=long'
+alias ll='ls -l'                              # long list
+alias la='ls -A'                              # all but . and ..
+alias l='ls -CF'
+alias k='exit'
+alias D='cd ~/Downloads'
+
+
+## Vim Stuff
+alias eV='vim ~/.vim/vimrc'
+alias e='vim'
+
+#ZSH Stuff
+alias eB='vim ~/.zshrc'
+alias eBG='atom ~/.zshrc'
+alias B='source ~/.zshrc'
+
+## News and Music
+alias news='newsbeuter'
+alias nix='cortex linux'
+alias twit='turses'
+
+## Net
+alias irc='weechat-curses'
+alias ST='speedtest-cli'
+alias ssh='TERM=xterm ssh'

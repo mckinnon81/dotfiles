@@ -35,10 +35,10 @@ alias PAY='sudo pacman -Syy'
 alias PAU='sudo pacman -Syu'
 
 # APT (Debian)
-alias AU="apt-get update"
-alias AD="apt-get upgrade"
-alias AUY="apt-get update -y"
-alias AUD="apt-get upgrade -y"
+alias AU="sudo apt-get update"
+alias AD="sudo apt-get upgrade"
+alias AUY="sudo apt-get update -y"
+alias ADY="sudo apt-get upgrade -y"
 
 # Default to human readable figures
 alias df='df -h'
@@ -71,9 +71,9 @@ alias eV='vim ~/.vim/vimrc'
 alias e='vim'
 
 #ZSH Stuff
-alias eB='vim ~/.zshrc'
-alias eBG='atom ~/.zshrc'
-alias B='source ~/.zshrc'
+alias eZ='vim ~/.zshrc'
+alias eZG='atom ~/.zshrc'
+alias Z='source ~/.zshrc'
 
 ## News and Music
 alias news='newsbeuter'

@@ -35,8 +35,10 @@ alias PAY='sudo pacman -Syy'
 alias PAU='sudo pacman -Syu'
 
 # APT (Debian)
+alias A="sudo apt-get"
+alias AI="sudo apt-get install"
 alias AU="sudo apt-get update"
-alias AD="sudo apt-get upgrade"
+alias AG="sudo apt-get upgrade"
 alias AUY="sudo apt-get update -y"
 alias ADY="sudo apt-get upgrade -y"
 

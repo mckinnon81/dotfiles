@@ -90,10 +90,6 @@ alias twit='turses'
 ## Net
 alias irc='weechat-curses'
 alias ST='speedtest-cli'
-<<<<<<< HEAD
 alias ssh='TERM=xterm-256color; ssh'
-=======
-alias ssh='TERM=xterm ssh'
 alias mutt='TERM=xterm-256color mutt'
 alias UM='imapfilter -v; offlineimap'
->>>>>>> a08828fec154c93a3d8d1b4ee5d91ef7376d02e0

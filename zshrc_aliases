@@ -83,4 +83,4 @@ alias twit='turses'
 ## Net
 alias irc='weechat-curses'
 alias ST='speedtest-cli'
-alias ssh='TERM=xterm ssh'
+alias ssh='TERM=xterm-256color; ssh'

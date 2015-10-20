@@ -9,7 +9,7 @@ MUTT_FILE=mutt/comprofix
 _pwd_prompt:
 	@echo "Contact mmckinnon@comprofix.com for the password."
 
-install: _pwd_prompt mutt nano vim zsh
+install: _pwd_prompt mutt nano vim zsh offlineimap imapfilter git
 	@echo "Installing dotfiles"
 
 install_decrypt: _pwd_prompt install decrypt
@@ -49,6 +49,12 @@ zsh:
 	@ln -s `pwd`/oh-my-zsh ~/.oh-my-zsh
 	@ln -s `pwd`/zshrc ~/.zshrc
 	@ln -s `pwd`/zshrc_aliases ~/.zshrc_aliases
+
+git:
+	@echo "Setup git"
+	@rm -fr ~/.gitconfig
+	@ln -s `pwd`/gitconfig ~/.gitconfig
+
 
 # to create conf/settings.json
 decrypt:

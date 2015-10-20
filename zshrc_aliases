@@ -1,5 +1,8 @@
 
-DISTRO=$(lsb_release -si)
+if [ -f /usr/bin/lsb_release ]; then
+    DISTRO=$(lsb_release -si)
+fi
+
 
 if [[ $DISTRO = 'Debian' ]]; then
 
@@ -35,8 +38,10 @@ alias PAY='sudo pacman -Syy'
 alias PAU='sudo pacman -Syu'
 
 # APT (Debian)
+alias A="sudo apt-get"
+alias AI="sudo apt-get install"
 alias AU="sudo apt-get update"
-alias AD="sudo apt-get upgrade"
+alias AG="sudo apt-get upgrade"
 alias AUY="sudo apt-get update -y"
 alias ADY="sudo apt-get upgrade -y"
 
@@ -72,7 +77,9 @@ alias e='vim'
 
 #ZSH Stuff
 alias eZ='vim ~/.zshrc'
-alias eZG='atom ~/.zshrc'
+alias eZA='atom ~/.zshrc'
+alias eA='vim ~/.zshrc_aliases'
+alias eAA='atom ~/.zshrc_aliases'
 alias Z='source ~/.zshrc'
 
 ## News and Music
@@ -83,4 +90,10 @@ alias twit='turses'
 ## Net
 alias irc='weechat-curses'
 alias ST='speedtest-cli'
+<<<<<<< HEAD
 alias ssh='TERM=xterm-256color; ssh'
+=======
+alias ssh='TERM=xterm ssh'
+alias mutt='TERM=xterm-256color mutt'
+alias UM='imapfilter -v; offlineimap'
+>>>>>>> a08828fec154c93a3d8d1b4ee5d91ef7376d02e0

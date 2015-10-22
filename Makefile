@@ -1,6 +1,6 @@
 .PHONY: _pwd_prompt install install_decrypt mutt nano vim zsh decrypt encrypt offlineimap imapfilter
 
-OIMAP_FILE=offlineimaprc
+OIMAP_FILE=offlineimap/offlineimaprc
 IMAPF_FILE=imapfilter/config.lua
 MUTT_FILE=mutt/comprofix
 
@@ -17,8 +17,8 @@ install_decrypt: _pwd_prompt install decrypt
 
 offlineimap:
 	@echo "Configuring with offlineimap settings"
-	@cp `pwd`/offlineimaprc.sample ~/.dotfiles/offlineimaprc
-	@ln -s `pwd`/offlineimaprc ~/.offlineimaprc
+	@cp `pwd`/offlineimap/offlineimaprc.sample ~/.dotfiles/offlineimaprc
+	@ln -s `pwd`/offlineimap/offlineimaprc ~/.offlineimaprc
 
 imapfilter:
 	@echo "Configuring imapfilter settings"
@@ -47,13 +47,13 @@ zsh:
 	@rm -fr ~/.oh-my-zsh
 	@rm -fr ~/.zsh*
 	@ln -s `pwd`/oh-my-zsh ~/.oh-my-zsh
-	@ln -s `pwd`/zshrc ~/.zshrc
-	@ln -s `pwd`/zshrc_aliases ~/.zshrc_aliases
+	@ln -s `pwd`/zsh/zshrc ~/.zshrc
+	@ln -s `pwd`/zsh/zshrc_aliases ~/.zshrc_aliases
 
 git:
 	@echo "Setup git"
 	@rm -fr ~/.gitconfig
-	@ln -s `pwd`/gitconfig ~/.gitconfig
+	@ln -s `pwd`/git/gitconfig ~/.gitconfig
 
 
 # to create conf/settings.json

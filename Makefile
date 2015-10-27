@@ -46,7 +46,7 @@ zsh:
 	@echo "Setup zsh"
 	@rm -fr ~/.oh-my-zsh
 	@rm -fr ~/.zsh*
-	@ln -s `pwd`/oh-my-zsh ~/.oh-my-zsh
+	@git clone https://github.com/mckinnon81/oh-my-zsh.git ~/.oh-my-zsh
 	@ln -s `pwd`/zsh/zshrc ~/.zshrc
 	@ln -s `pwd`/zsh/zshrc_aliases ~/.zshrc_aliases
 

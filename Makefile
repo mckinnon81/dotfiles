@@ -1,4 +1,4 @@
-.PHONY: _pwd_prompt install install_decrypt mutt nano vim zsh decrypt encrypt offlineimap imapfilter
+.PHONY: _pwd_prompt install install_decrypt mutt nano vim zsh offlineimap imapfilter git decrypt encrypt
 
 OIMAP_FILE=offlineimap/offlineimaprc
 IMAPF_FILE=imapfilter/config.lua
@@ -17,11 +17,13 @@ install_decrypt: _pwd_prompt install decrypt
 
 offlineimap:
 	@echo "Configuring with offlineimap settings"
-	@cp `pwd`/offlineimap/offlineimaprc.sample ~/.dotfiles/offlineimaprc
+	@rm -fr ~/.offlineimaprc
+	@cp `pwd`/offlineimap/offlineimaprc.sample ~/.dotfiles/offlineimap/offlineimaprc
 	@ln -s `pwd`/offlineimap/offlineimaprc ~/.offlineimaprc
 
 imapfilter:
 	@echo "Configuring imapfilter settings"
+	@rm -fr ~/.imapfilter
 	@ln -s `pwd`/imapfilter ~/.imapfilter
 	@cp `pwd`/imapfilter/config.lua.sample ~/.imapfilter/config.lua
 
@@ -29,7 +31,7 @@ mutt:
 	@echo "Configuring mutt settings"
 	@rm -fr ~/.mutt
 	@ln -s `pwd`/mutt/ ~/.mutt
-	@cp ~/.mutt/comprofix.sample ~/.mutt/comprofix
+	@cp `pwd`/mutt/comprofix.sample ~/.mutt/comprofix
 
 nano:
 	@echo "Install nano"
@@ -46,7 +48,8 @@ zsh:
 	@echo "Setup zsh"
 	@rm -fr ~/.oh-my-zsh
 	@rm -fr ~/.zsh*
-	@git clone https://github.com/mckinnon81/oh-my-zsh.git ~/.oh-my-zsh
+	@git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+	@ln -s `pwd`/oh-my-zsh/moe.zsh-theme ~/.oh-my-zsh/themes/moe.zsh-theme
 	@ln -s `pwd`/zsh/zshrc ~/.zshrc
 	@ln -s `pwd`/zsh/zshrc_aliases ~/.zshrc_aliases
 

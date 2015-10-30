@@ -8,4 +8,5 @@ dotfiles
  * bash - bashrc, bash_colors and bash_liases for use with bash shell.
  * offlineimap - offlineimap configs for downloading email from remote servers.
  * zsh - zshrc and zshrc_aliases config files
+ * oh-my-zsh - Persoanl oh-my-zsh theme
 

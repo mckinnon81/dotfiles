@@ -13,3 +13,5 @@
 	default = simple
 [http]
 	sslverify = false
+[core]
+	autocrlf = false

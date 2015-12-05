@@ -1,3 +1,6 @@
 mutt/comprofix
 offlineimap/offlineimaprc
 imapfilter/config.lua
+weechat/logs
+weechat/weechat.log
+weechat/sec.conf

@@ -1,4 +1,4 @@
-.PHONY: _pwd_prompt install install_decrypt mutt nano vim zsh offlineimap imapfilter git decrypt encrypt
+.PHONY: _pwd_prompt install install_decrypt mutt nano vim zsh offlineimap imapfilter git decrypt encrypt weechat
 
 OIMAP_FILE=offlineimap/offlineimaprc
 IMAPF_FILE=imapfilter/config.lua
@@ -9,7 +9,7 @@ MUTT_FILE=mutt/comprofix
 _pwd_prompt:
 	@echo "Contact mmckinnon@comprofix.com for the password."
 
-install: _pwd_prompt mutt nano vim zsh offlineimap imapfilter git
+install: _pwd_prompt mutt nano vim zsh offlineimap imapfilter git weechat
 	@echo "Installing dotfiles"
 
 install_decrypt: _pwd_prompt install decrypt
@@ -57,6 +57,11 @@ git:
 	@echo "Setup git"
 	@rm -fr ~/.gitconfig
 	@ln -s `pwd`/git/gitconfig ~/.gitconfig
+
+weechat: 
+	@echo "Setup weechat"
+	@rm -fr ~/.weechat
+	@ln -s `pwd`/weechat ~/.weechat
 
 
 # to create conf/settings.json

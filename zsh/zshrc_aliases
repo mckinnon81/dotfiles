@@ -4,9 +4,7 @@ if [ -f /usr/bin/lsb_release ]; then
 fi
 
 if [[ $DISTRO = 'Debian' ]]; then
-
     alias archey='screenfetch'
-
 fi
 
 # Fun / Games
@@ -90,4 +88,4 @@ alias irc='weechat-curses'
 alias ST='speedtest-cli'
 alias ssh='TERM=xterm-256color; ssh'
 alias mutt='TERM=xterm-256color mutt'
-alias UM='imapfilter -v; offlineimap'
+alias UM='imapfilter; offlineimap'

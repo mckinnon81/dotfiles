@@ -1,14 +1,11 @@
 
 source $HOME/.mutt/colors
 
-
-
 folder-hook '~/Mail/Comprofix' 'source ~/.mutt/comprofix'
 
 macro index <f2> '<sync-mailbox><enter-command>source ~/.mutt/comprofix<enter><change-folder>!<enter>'
 
 source ~/.mutt/comprofix
-
 
 set move = no
 set confirmappend = no
@@ -24,8 +21,6 @@ auto_view image/png
 auto_view application/x-gunzip
 auto_view application/x-gzip
 
-
-
 #set sidebar_shortpath
 set sidebar_visible = no
 set sidebar_width = 33
@@ -38,7 +33,6 @@ color sidebar_new color027 color000
 macro index b '<enter-command>toggle sidebar_visible<enter><refresh>'
 macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
 bind index B bounce-message
-
 
 #set index_format="%3C %Z %[!%d.%m %H:%M] %-35.35L (%5c) %s"       # Bronski's favourite
 set index_format="%4C %Z %[!%d %b %y %I:%M%p] %-35.35L (%5c) %s"

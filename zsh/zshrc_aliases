@@ -3,7 +3,6 @@ if [ -f /usr/bin/lsb_release ]; then
     DISTRO=$(lsb_release -si)
 fi
 
-
 if [[ $DISTRO = 'Debian' ]]; then
 
     alias archey='screenfetch'
@@ -69,7 +68,6 @@ alias la='ls -A'                              # all but . and ..
 alias l='ls -CF'
 alias k='exit'
 alias D='cd ~/Downloads'
-
 
 ## Vim Stuff
 alias eV='vim ~/.vim/vimrc'

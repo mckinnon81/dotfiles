@@ -51,14 +51,14 @@ zsh:
 	@git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 	@ln -s `pwd`/oh-my-zsh/moe.zsh-theme ~/.oh-my-zsh/themes/moe.zsh-theme
 	@ln -s `pwd`/zsh/zshrc ~/.zshrc
-	@ln -s `pwd`/zsh/zshrc_aliases ~/.zshrc_aliases
+	
 
 git:
 	@echo "Setup git"
 	@rm -fr ~/.gitconfig
 	@ln -s `pwd`/git/gitconfig ~/.gitconfig
 
-weechat: 
+weechat:
 	@echo "Setup weechat"
 	@rm -fr ~/.weechat
 	@ln -s `pwd`/weechat ~/.weechat

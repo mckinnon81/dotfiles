@@ -9,7 +9,7 @@ MUTT_FILE=mutt/comprofix
 _pwd_prompt:
 	@echo "Contact mmckinnon@comprofix.com for the password."
 
-install: _pwd_prompt mutt nano vim zsh offlineimap imapfilter git weechat
+install: _pwd_prompt mutt nano vim zsh git weechat
 	@echo "Installing dotfiles"
 
 install_decrypt: _pwd_prompt install decrypt
@@ -18,7 +18,7 @@ install_decrypt: _pwd_prompt install decrypt
 offlineimap:
 	@echo "Configuring with offlineimap settings"
 	@rm -fr ~/.offlineimaprc
-	@cp `pwd`/offlineimap/offlineimaprc.sample ~/.dotfiles/offlineimap/offlineimaprc
+	@cp `pwd`/offlineimap/offlineimaprc.sample `pwd`/offlineimap/offlineimaprc
 	@ln -s `pwd`/offlineimap/offlineimaprc ~/.offlineimaprc
 
 imapfilter:
@@ -51,7 +51,7 @@ zsh:
 	@git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 	@ln -s `pwd`/oh-my-zsh/moe.zsh-theme ~/.oh-my-zsh/themes/moe.zsh-theme
 	@ln -s `pwd`/zsh/zshrc ~/.zshrc
-	
+
 
 git:
 	@echo "Setup git"

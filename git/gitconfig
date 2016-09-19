@@ -26,6 +26,7 @@
 
 [http]
 	sslverify = false
+	postBuffer = 524288000
 
 [core]
 	autocrlf = false

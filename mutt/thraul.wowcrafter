@@ -1,0 +1,20 @@
+set realname = "Thraul"
+set from = "thraul@wowcrafter.com"
+
+set imap_user = "thraul@wowcrafter.com"
+
+set smtp_url="smtp://$imap_user@mail.wowcrafter.com/"
+
+macro index d "s=Trash\n" "move message to trash"
+macro pager d "C=Trash\n\n<exit><delete-message>" "move message to trash"
+
+
+set folder = "imap://$imap_user@mail.wowcrafter.com/"
+set spoolfile = "imap://$imap_user@mail.wowcrafter.com/INBOX"
+set record = "+Sent"
+set postponed = "+Draft"
+set trash = "+Trash"
+
+set move = no
+set imap_check_subscribed
+mailboxes +INBOX

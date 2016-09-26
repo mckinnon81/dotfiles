@@ -1,15 +1,23 @@
 
 source $HOME/.mutt/colors
 
-folder-hook '~/Mail/Comprofix' 'source ~/.mutt/comprofix'
 
+
+folder-hook 'mmckinnon' 'source ~/.mutt/comprofix'
+folder-hook 'support' 'source ~/.mutt/support'
+folder-hook 'thraul'  'source ~/.mutt/thraul.wowcrafter'
 source ~/.mutt/comprofix
+
+macro index <f2> '<sync-mailbox><enter-command>source ~/.mutt/comprofix<enter><change-folder>!<enter>'
+macro index <f3> '<sync-mailbox><enter-command>source ~/.mutt/support<enter><change-folder>!<enter>'
+macro index <f4> '<sync-mailbox><enter-command>source ~/.mutt/thraul.wowcrafter<enter><change-folder>!<enter>'
+
 
 set move = no
 set confirmappend = no
 set mailcap_path = $HOME/.mutt/mailcap
 set sort = threads
-#set sort_aux = reverse-date-received
+set sort_aux = reverse-date-received
 set smart_wrap
 
 alternative_order text/plain text/html

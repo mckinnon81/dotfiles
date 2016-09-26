@@ -1,0 +1,20 @@
+set realname = "Support | Comprofix"
+set from = "support@comprofix.com"
+
+set imap_user = "support@comprofix.com"
+
+set smtp_url="smtp://$imap_user@mail.comprofix.com/"
+
+macro index d "s=Trash\n" "move message to trash"
+macro pager d "C=Trash\n\n<exit><delete-message>" "move message to trash"
+
+
+set folder = "imap://$imap_user@mail.comprofix.com/"
+set spoolfile = "imap://$imap_user@mail.comprofix.com/INBOX"
+set record = "+Sent"
+set postponed = "+Draft"
+set trash = "+Trash"
+
+set move = no
+set imap_check_subscribed
+mailboxes +INBOX

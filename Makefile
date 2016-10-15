@@ -4,7 +4,6 @@ OIMAP_FILE=offlineimap/offlineimaprc
 IMAPF_FILE=imapfilter/config.lua
 MUTT_FILE=mutt/comprofix
 
-
 # 'private' task for echoing instructions
 _pwd_prompt:
 	@echo "Contact mmckinnon@comprofix.com for the password."

@@ -12,6 +12,9 @@ _pwd_prompt:
 install: _pwd_prompt mutt nano vim zsh git weechat
 	@echo "Installing dotfiles"
 
+installzsh: _pwd_prompt nano vim git zsh
+	@echo "Installing zsh shell"
+
 mutt:
 	@echo "Configuring mutt settings"
 	@rm -fr ~/.mutt

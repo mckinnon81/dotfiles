@@ -394,4 +394,5 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
-colorscheme zenburn
+" colorscheme zenburn
+colorscheme eldar

@@ -395,4 +395,4 @@ function! <SID>BufcloseCloseIt()
 endfunction
 
 " colorscheme zenburn
-colorscheme eldar
+colorscheme wombat256i

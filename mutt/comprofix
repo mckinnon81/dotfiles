@@ -1,19 +1,19 @@
 set realname = "Matthew McKinnon"
-set from = "mmckinnon@comprofix.com"
+set from = "comprofix@list.comprofix.com"
 
-set imap_user = "mmckinnon@comprofix.com"
+set imap_user = "comprofix@list.comprofix.com"
 
-set smtp_url="smtp://$imap_user@mail.comprofix.com/"
+set smtp_url="smtp://$imap_user@list.comprofix.com/"
 
-macro index d "s=Trash\n" "move message to trash"
-macro pager d "C=Trash\n\n<exit><delete-message>" "move message to trash"
+macro index d "s=INBOX.Trash\n" "move message to trash"
+macro pager d "C=INBOX.Trash\n\n<exit><delete-message>" "move message to trash"
 
 
-set folder = "imap://$imap_user@mail.comprofix.com/"
-set spoolfile = "imap://$imap_user@mail.comprofix.com/INBOX"
-set record = "+Sent"
-set postponed = "+Draft"
-set trash = "+Trash"
+set folder = "imap://$imap_user@list.comprofix.com/"
+set spoolfile = "imap://$imap_user@list.comprofix.com/INBOX"
+set record = "+INBOX.Sent"
+set postponed = "+INBOX.Drafts"
+set trash = "+INBOX.Trash"
 
 set move = no
 set imap_check_subscribed

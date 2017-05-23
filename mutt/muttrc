@@ -11,6 +11,7 @@ set mailcap_path = $HOME/.mutt/mailcap
 set sort = threads
 #set sort_aux = reverse-date-received
 set smart_wrap
+set signature=$HOME/.mutt/signature
 
 alternative_order text/plain text/html
 
